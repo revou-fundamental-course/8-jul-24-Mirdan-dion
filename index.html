@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Form Kalkulator BMI -->
+        <div class="calculator">
+            <h2>Kalkulator BMI</h2>
+
+            <!-- the section is for selecting gender -->
+            <div class="form-group">
+                <label for="gender">Jenis Kelamin:</label>
+                <select id="gender">
+                    <option value="male">Laki-laki</option>
+                    <option value="female">Perempuan</option>
+                </select>
+            </div>
+            <!-- the section is for selecting the age -->
+            <div class="form-group">
+                <label for="age">Usia:</label>
+                <input type="number" id="age" min="0">
+            </div>
+             <!-- this section in for weight input-->
+            <div class="form-group">
+                <label for="weight">Berat Badan (kg):</label>
+                <input type="number" id="weight" min="0">
+            </div>
+            <!-- this section in for height input-->
+            <div class="form-group">
+                <label for="height">Tinggi Badan (cm):</label>
+                <input type="number" id="height" min="0">
+            </div>
+            <button onclick="calculateBMI()">Hitung BMI</button>
+            <button onclick="resetForm()">Reset</button>
+        </div>
+        
+        <!-- Hasil BMI -->
+        <div class="result" id="result">
+            <h2>Hasil BMI</h2>
+            <p id="bmiResult"></p>
+            <p id="bmiExplanation"></p>
+            <button onclick="downloadResult()">Download Hasil BMI</button>
+            <button onclick="consultationOffline()">Konsultasi Ahli Gizi di PKM Ambalawi</button>
+            <button onclick="consultationOnline()">Konsultasi Ahli Gizi Secara Online</button>
+
+            <!-- addition article -->
+            <p>Informasi lebih lanjut tentang BMI dapat membantu Anda memahami kesehatan tubuh Anda.</p>
+            <p>Hubungi ahli gizi untuk konsultasi lebih lanjut mengenai pola makan dan gaya hidup sehat.</p>
+            <h3>Mirdan Bima NTB</h3>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
